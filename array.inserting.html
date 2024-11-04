@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Inserting</title>
+</head>
+
+<body>
+
+    <input type="text" id="positon" placeholder="enter posioton">
+    <input type="text" id="newEl" placeholder="enter new element">
+
+    <button onclick="insertEl()">Insert</button>
+
+    <script>
+
+
+        //  let data = [2,3,5,7,89,565,3,0]
+
+        //  let el = 90
+
+        //  let position = 3
+
+        //  for(let i = data.length-1; i >= 0; i--){
+        //     if(i >= position){
+        //         data[i+1] = data[i]
+        //         if(i===position){
+        //             data[i]= el
+        //         }
+
+        //     }
+        //  }
+        //  console.warn(data)
+
+
+        function insertEl() {
+
+            let data = [2, 3, 5, 7, 89, 565, 3, 0]
+
+            let el = document.getElementById("newEl").value;
+
+            let position = document.getElementById('positon').value;
+            console.warn(data)
+
+
+            for (let i = data.length - 1; i >= 0; i--) {
+                if (i >= position) {
+                    data[i + 1] = data[i]
+                    if (i == position) {
+                        data[i] = el
+                    }
+
+                }
+              
+            }
+            console.warn(data)
+       
+
+        }
+
+
+        let items= [20,4,55,89,9, 3]
+        items.splice(2, 0 , 200) // first parameter index 2nd for how much element you want to delete 3rd is elemnt to add 
+
+        console.log(items) 
+    </script>
+</body>
+
+</html>
